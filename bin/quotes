@@ -1,0 +1,5 @@
+#!/bin/bash
+
+TAGS='|DESIGN'
+
+pbpaste | sed -e  's/"//g' -e 's/“//g' -e 's/”//g' -e "s/$/|DESIGN"
