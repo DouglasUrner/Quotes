@@ -1,5 +1,11 @@
 #!/bin/bash
 
-TAGS='|DESIGN'
+# quotes: Stash a quote.
+#
+# -a - author's name
+# -c - context in which the author expressed the quote
+# -t - tags for the quote
 
-pbpaste | sed -e  's/"//g' -e 's/“//g' -e 's/”//g' -e "s/$/|DESIGN"
+TAGS='DESIGN'
+
+pbpaste | sed -e 's/"//g' -e 's/“//g' -e 's/”//g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/^/|/' -e "s/$/|$CONTEXT/" -e "s/$/|$TAGS/" -e 's/$/|/'
