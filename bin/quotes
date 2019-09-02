@@ -4,8 +4,9 @@
 #
 # -a - author's name
 # -c - context in which the author expressed the quote
+# -d - ISO date of quote
 # -t - tags for the quote
 
 TAGS='DESIGN'
 
-pbpaste | sed -e 's/"//g' -e 's/“//g' -e 's/”//g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/^/|/' -e "s/$/|$CONTEXT/" -e "s/$/|$TAGS/" -e 's/$/|/'
+pbpaste | sed -e 's/"//g' -e 's/“//g' -e 's/”//g' -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//' -e 's/^/|/' -e "s/$/|$CONTEXT/" -e "s/$/|$DATE/" -e "s/$/|$TAGS/" -e 's/$/|/'
